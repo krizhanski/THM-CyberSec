@@ -193,13 +193,13 @@ After saving all remediations, I triggered the SAST scanner one final time:
 ```
 **Result:** `No errors found!`
 
-### Final Summary
+## 📖 Final Summary
 This exercise highlights why a comprehensive SDLC requires both approaches:
 * **Manual Testing** is essential for understanding business logic, spotting logical flaws (like the limit `1` bypass in Regex), and designing architectural defenses like whitelists.
 * **Automated Scanning (SAST)** is indispensable for scaling security. It traces complex data flows rapidly across massive codebases to highlight exactly where tainted data reaches vulnerable sinks.
 
 Combining both ensures robust, secure code before it ever reaches production.
-
+---
 
 
 
@@ -347,4 +347,5 @@ ERROR: TaintedInclude - html/view.php:22:9 - Detected tainted code passed to inc
 include('./gallery-files/'.$_GET['img']);
 
   concat - html/view.php:22:9
+
 include('./gallery-files/'.$_GET['img']);
