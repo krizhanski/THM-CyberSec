@@ -21,7 +21,6 @@ I am actively training on TryHackMe to build practical, real-world skills in thr
 ## 📁 My Projects & Write-ups
 
 ### 🔒 DevSecOps & Secure SDLC
-* [Implementing Secure SDLC: Manual Code Review and SAST Analysis](./DevSecOps_SSDLC/Manual_and_SAST_Review.md)
-  * *Description:* A deep-dive analysis of identifying and remediating Local File Inclusion (LFI), SQL Injections, Command Injection, and XSS in a PHP application using secure coding practices (whitelisting, prepared statements) and automated SAST scanners.
-
+* [**Implementing Secure SDLC: Manual Code Review and SAST Analysis**](./DevSecOps_SSDLC/SDLC.md)
+  * *Description:* A deep-dive analysis of discovering and remediating LFI, SQLi, Command Injection, and XSS vulnerabilities in a vulnerable PHP application using secure coding practices and the Psalm SAST scanner.
 ---
