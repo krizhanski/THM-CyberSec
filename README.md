@@ -1,5 +1,4 @@
-# 🛡️ Hi, I'm a Future SOC Engineer!
-Welcome to my GitHub! This repository serves as a diary of my practical cybersecurity training, write-ups, and hands-on laboratory projects.
+# 🛡️ Welcome to my GitHub! This repository serves as a diary of my practical cybersecurity training, write-ups, and hands-on laboratory projects.
 
 ## 🚀 My TryHackMe Achievements
 I am actively training on TryHackMe to build practical, real-world skills in threat hunting, incident response, and secure development.
