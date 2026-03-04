@@ -44,15 +44,15 @@ To deeply understand network anomalies, it is essential to comprehend the struct
 In this section, we break down the network anomalies discovered in the packet capture file. This step-by-step analysis reconstructs the attacker's logic.
 
 ### 📈 4.1. Statistical Attack Profile (Conversations)
-The first step in the investigation is assessing the overall scale of network interaction. For this, we utilized Wireshark's built-in tool: `Statistics -> Conversations` (IPv4 tab).
+The first step in the investigation is assessing the overall scale of network interaction. For this, I utilized Wireshark's built-in tool: `Statistics -> Conversations` (IPv4 tab).
 
-* **Observation:** We captured an intense data exchange between host `10.10.60.7` (Attacker) and `10.10.47.123` (Target). The total number of packets in the session reached **6544**, while the total transferred data volume was merely **379 KB**. The attack lasted approximately 23 minutes.
+* **Observation:** I captured an intense data exchange between host `10.10.60.7` (Attacker) and `10.10.47.123` (Target). The total number of packets in the session reached **6544**, while the total transferred data volume was merely **379 KB**. The attack lasted approximately 23 minutes.
 * **Analytical Conclusion:** > This abnormal ratio (a massive number of packets with minimal payload—averaging ~58 bytes per packet) is an undeniable Indicator of Compromise (IoC) of automated network scanning. The attacker was not transmitting actual data; they were generating thousands of "empty" requests purely for Port Discovery.
 ![StatisticalAttackProfile](StatisticalAttackProfile.jpg)
 
 
 ### 🖃 4.2. Technical Tool Identification (Nmap Fingerprinting)
-Having confirmed the scanning activity, we identified the specific tool used by the attacker relying on digital footprints within the TCP headers.
+Having confirmed the scanning activity, I identified the specific tool used by the attacker relying on digital footprints within the TCP headers.
 
 * **Methodology:** Applied the filter `tcp.window_size == 1024`.
 * **Observation:** The output revealed hundreds of packets from the attacker's host (`10.10.60.7`) with a strictly hardcoded TCP Window Size of exactly 1024 bytes.
@@ -61,7 +61,7 @@ Having confirmed the scanning activity, we identified the specific tool used by 
 
 
 ### 🛡️ 4.3. Port State Analysis (RST/ACK Responses)
-To understand how vulnerable the network is and how it reacts to external probing, we analyzed the return traffic from the target.
+To understand how vulnerable the network is and how it reacts to external probing, I analyzed the return traffic from the target.
 
 * **Methodology:** Analyzed a specific packet (e.g., **#4006**) using the filter `tcp.flags.reset == 1`.
 * **Observation:** Upon the attacker's attempt to connect to port **999**, the target machine responded with a packet containing **[RST, ACK]** flags. The packet details clearly show the `Reset: Set` bit (value 1). The response time was measured in fractions of a millisecond.
@@ -100,7 +100,7 @@ The conducted investigation irrefutably confirms targeted network reconnaissance
 2.  Attempted asset deanonymization using the NetBIOS protocol (NBNS).
 3.  Executed massive port scanning across TCP and UDP protocols.
 
-The consistent use of specific TCP header parameters (Window Size = 1024) allowed us to unequivocally identify the usage of the **Nmap** automated scanner.
+The consistent use of specific TCP header parameters (Window Size = 1024) allowed me to unequivocally identify the usage of the **Nmap** automated scanner.
 
 ### 🎯 Target Security Assessment
 The return traffic analysis revealed that the target system is **unprotected** by an active Firewall that would block illegitimate requests. The victim's operating system directly handles the scanner's packets, generating immediate responses (RST for TCP and ICMP Unreachable for UDP). This significantly facilitates the attacker's job, allowing them to map open and closed services with maximum speed and accuracy.
