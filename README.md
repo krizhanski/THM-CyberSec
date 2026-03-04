@@ -26,3 +26,7 @@ I am actively training on TryHackMe to build practical, real-world skills in thr
 * [**Implementing Secure SDLC: Manual Code Review and SAST Analysis**](./DevSecOps_SSDLC/SDLC.md)
   * *Description:* A deep-dive analysis of discovering and remediating LFI, SQLi, Command Injection, and XSS vulnerabilities in a vulnerable PHP application using secure coding practices and the Psalm SAST scanner.
 ---
+### 🔒 Network Anomaly Analysis (Nmap)
+* [**Network Anomaly Analysis (Nmap)**](.Network Anomaly Analysis (Nmap)/Network_Anomaly_Analysis_(Nmap).md)
+  * *Description:* Network Anomaly Analysis: Detection and Deconstruction of Nmap Scanning.
+---
