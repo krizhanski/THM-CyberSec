@@ -2,10 +2,10 @@
 
 ## 🚀 My TryHackMe Achievements
 I am actively training on TryHackMe to build practical, real-world skills in threat hunting, incident response, and secure development.
-* **Global Rank:** #7613 (Top 1%)
-* **Learning Streak:** 76+ days (Current Goal: 100 days)
-* **Rooms Completed:** 264+
-* * **Badges:** 53
+* **Global Rank:** #6893 (Top 1%)
+* **Learning Streak:** 85+ days (Current Goal: 100 days)
+* **Rooms Completed:** 273+
+* * **Badges:** 54
 * **Profile & Badges:** [View my TryHackMe Profile (NutCracker)](https://tryhackme.com/p/NutCracker)
 
 ## 📚 Completed Learning Paths
@@ -29,4 +29,8 @@ I am actively training on TryHackMe to build practical, real-world skills in thr
 ### 🔒 Network Anomaly Analysis (Nmap)
 * [**Network Anomaly Analysis (Nmap)**](./Network%20Anomaly%20Analysis%20(Nmap)/Network_Anomaly_Analysis_(Nmap).md)
   * *Description:* Network Anomaly Analysis: Detection and Deconstruction of Nmap Scanning.
+---
+### 🔒 What is QUIC & HTTP/3? A Cybersecurity Perspective
+* [**What is QUIC & HTTP/3? A Cybersecurity Perspective**](./HTTP3_QUIC/HTTP3_QUIC.md)
+  * *Description:* Exploring QUIC & HTTP/3.
 ---
